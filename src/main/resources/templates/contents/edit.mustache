@@ -1,0 +1,27 @@
+{{>layouts/header}}
+
+{{#blog}}
+<form class="container" action="/blog/update/" method="post">
+    <input name="id" type="hidden" value="{{id}}"/>
+    <div class="mb-3">
+        <label class="form-label">제목</label>
+        <input type="text" class="form-control" name="title" value="{{title}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">이름</label>
+        <input type="text" class="form-control" name="username" value="{{username}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">비밀번호</label>
+        <input type="password" class="form-control" name="password" value="{{password}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">내용</label>
+        <textarea class="form-control" rows="3" name="contents" value="{{contents}}"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <a href="/blog/get{{blog.id}}" class="btn btn primary">메인 홈</a>
+</form>
+{{/blog}}
+{{>layouts/footer}}

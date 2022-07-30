@@ -1,0 +1,29 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Username</th>
+        <th scope="col">Contents</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#blog}}
+    <tr>
+        <th scope="row">{{id}}</th>
+        <td>{{title}}</td>
+        <td>{{username}}</td>
+        <td>{{contents}}</td>
+    </tr>
+    {{/blog}}
+    </tbody>
+</table>
+
+
+<a href="/" class="btn btn primary">메인 홈</a>
+<a href="/blog/post"class="btn btn primary"> 글 작성 </a>
+<a href="/blog/get/{{id}}/edit" class="btn btn primary"> 수정 </a>
+
+{{>layouts/footer}}
